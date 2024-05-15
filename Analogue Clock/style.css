@@ -1,0 +1,88 @@
+#clockContainer {
+    /* border: 2px solid red; */
+    height: 40vw;
+    width: 40vw;
+    background: url("clock.png") no-repeat;
+    background-size: 100%;
+    margin: auto;
+    position: relative;
+    margin-top: 4vw;
+}
+
+/*cursor animation*/
+/* #clockContainer:hover{
+    cursor:url('icons8-sword-48\ \(1\).png'),auto;
+}
+
+body{
+    cursor: url('icons8-sword-48.png'),auto;
+} */
+
+#hour,
+#minute,
+#second {
+    position: absolute;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 2.5%;
+    height: 25%;
+    top: 25%;
+    left: 48.60%;
+    z-index: 2;
+    background-color: rgb(60, 60, 60);
+    /* box-shadow: 2px 1px 5px grey 0.5 ; */
+    /* opacity: 0.8; */
+}
+
+#minute {
+    width: 1.5%;
+    height: 35%;
+    top: 15%;
+    left: 49.1%;
+    z-index: 3;
+    background-color: rgb(23, 23, 23);
+    /* box-shadow: 2px 1px 5px grey ; */
+    /* opacity: 0.8; */
+}
+
+#second {
+    width: 1%;
+    height: 35%;
+    top: 15%;
+    left: 49.4%;
+    z-index: 4;
+    background-color: rgb(23, 23, 23);
+    /* opacity: 0.8; */
+    /* box-shadow: 2px 1px 5px grey ; */
+}
+
+.cover {
+    position: absolute;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 60%;
+    background-color:rgb(255, 0, 0);
+    top:46.7%;
+    left:46.75%;
+    z-index: 5;
+}
+
+
+.text{
+    position: absolute;
+    color: coral;
+    left:42%;
+    top:56%;
+    z-index: 1;
+}
+
+@media screen and (max-width:800){
+    #clockContainer{
+        width:60vw;
+        height: 60vw;
+        margin-top: 50vw;
+    }
+}

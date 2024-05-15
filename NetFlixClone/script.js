@@ -1,0 +1,299 @@
+// console.log("hello world");
+
+const { createServer } = require('node:http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end(`<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Netflix - Watch Movies Now</title>
+      <link rel="stylesheet" href="style.css" />
+      <link
+        rel="icon"
+        href="Assets/netflix-icon-icon-1024x1024-w4ni4f6d.png"
+        type="images/x-icon"
+      />
+    </head>
+    <body>
+      <div class="scrollWatcher"></div>
+      <div class="main">
+        <nav>
+          <span><img src="Assets/logo.svg" width="100" alt="" /></span>
+          <div>
+            <button class="btn">
+              <i class="fa-solid fa-globe"></i> English
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <button class="btn btn-red-sm">Sign In</button>
+          </div>
+        </nav>
+        <div class="box"></div>
+        <div class="hero">
+          <span>Unlimited movies, TV shows and more </span>
+          <span>Watch anywhere. Cancel anytime.</span>
+          <span
+            >Ready to watch? Enter your email or mobile number to create or
+            restart your membership.</span
+          >
+          <div class="hero-buttons">
+            <input
+              type="text"
+              name="input"
+              id=""
+              placeholder="Email or Phone number"
+            />
+            <button class="btn btn-red">
+              Get Started<img
+                class="chevron"
+                src="Assets/chevron-left-solid.svg"
+                alt=""
+                style="transform: rotate(180deg)"
+                width="16"
+              />
+            </button>
+          </div>
+        </div>
+        <div class="seperation"></div>
+        <section class="first">
+          <div>
+            <span> Enjoy on your TV</span>
+            <span>
+              Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+              players and more.</span
+            >
+          </div>
+          <div class="secImage">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+              alt=""
+            />
+            <video
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+              autoplay
+              loop
+              mute
+            ></video>
+          </div>
+        </section>
+        <div class="seperation"></div>
+        <section class="first second">
+          <div class="secImage">
+            <img
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg"
+              alt=""
+            />
+            <!-- <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" autoplay playsinline loop muted></video> -->
+          </div>
+          <div>
+            <span>Download your shows to watch offline</span>
+            <span
+              >Save your favourites easily and always have something to
+              watch.</span
+            >
+          </div>
+        </section>
+        <div class="seperation"></div>
+        <section class="first third">
+          <div>
+            <span> Watch everywhere</span>
+            <span>
+              Stream unlimited movies and TV shows on your phone, tablet, laptop,
+              and TV.</span
+            >
+          </div>
+          <div class="secImage">
+            <img src="Assets/tv.png" alt="" />
+            <video
+              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices-in.m4v"
+              autoplay
+              loop
+              mute
+            ></video>
+          </div>
+        </section>
+        <div class="seperation"></div>
+        <section class="first second">
+          <div class="secImage">
+            <img
+              src="https://occ-0-3779-3663.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+              alt=""
+            />
+            <!-- <video src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" autoplay playsinline loop muted></video> -->
+          </div>
+          <div>
+            <span>Create profiles for kids</span>
+            <span
+              >Send children on adventures with their favourite characters in a
+              space made just for them—free with your membership.</span
+            >
+          </div>
+        </section>
+        <div class="seperation"></div>
+  
+        <section class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faqBox">
+            <span>What is Netflix?</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+          </div>
+          <div class="faqBox">
+            <span>How much does Netflix cost?</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+          </div>
+          <div class="faqBox">
+            <span>Where can I watch?</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+          </div>
+          <div class="faqBox">
+            <span>How do I cancel?</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+          </div>
+          <div class="faqBox">
+            <span>What can I watchh on Netflix?</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+          </div>
+          <div class="faqBox">
+            <span>Is Netflix good for kids?</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+              fill="white"
+            >
+              <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+              <path
+                d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
+              />
+            </svg>
+          </div>
+          <div class="userIn">
+            <span
+              >Ready to watch? Enter your email or mobile number to create or
+              restart your membership.</span
+            >
+            <div class="hero-buttons">
+              <input
+                type="text"
+                name="input"
+                id=""
+                placeholder="Email or Phone number"
+              />
+              <button class="btn btn-red">
+                Get Started<img
+                  class="chevron"
+                  src="Assets/chevron-left-solid.svg"
+                  alt=""
+                  style="transform: rotate(180deg)"
+                  width="16"
+                />
+              </button>
+            </div>
+          </div>
+        </section>
+        <div class="seperation"></div>
+  
+        <footer>
+          <div class="qn">Questions? Call 000-800-919-1694</div>
+          <div class="footer">
+            <div class="footerItem">
+              <a href="faq">FAQ</a>
+              <a href="faq">Investor Relations</a>
+              <a href="faq">Privacy</a>
+              <a href="faq">Speed Test</a>
+            </div>
+            <div class="footerItem">
+              <a href="faq">Help Centre</a>
+              <a href="faq">Jobs</a>
+              <a href="faq">Cookie Preferences</a>
+              <a href="faq">Legal Notices</a>
+            </div>
+            <div class="footerItem">
+              <a href="faq">Account</a>
+              <a href="faq">Ways to Watch</a>
+              <a href="faq">Corporate Information</a>
+              <a href="faq">Only on Netflix</a>
+            </div>
+            <div class="footerItem">
+              <a href="faq">Media Centre</a>
+              <a href="faq">Terms of Use</a>
+              <a href="faq">Contact Us</a>
+            </div>
+          </div>
+  
+          <div class="laBtn">
+            <button class="btn">
+              <i class="fa-solid fa-globe"></i> English
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+          </div>
+          <div class="netflixIn">
+            <a href="https://www.netflix.com/in/">Netflix India</a>
+          </div>
+        </footer>
+  
+        <script
+          src="https://kit.fontawesome.com/61caa62052.js"
+          crossorigin="anonymous"
+        ></script>
+      </div>
+    </body>
+  </html>
+  
+  `);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
+

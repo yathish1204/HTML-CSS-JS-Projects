@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yathish Shettigar - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sideBar sideBarGo">
+        <!-- Yathish -->
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/intro.html">Introduction</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/blogs.html">Blogs</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main">
+        <div class="hamBurger">
+          <img class="ham" src="bars-solid.svg" alt="Ham Burger Menu" width="24" >
+          <img class="cross" src="xmark-solid.svg" alt="Ham Burger Menu" width="24"  >
+        </div>
+        <div class="contactForm">
+          <h1>Contact Me</h1>
+          <form>
+            <div class="mb-3 one">
+              <label for="clientEmail" class="form-label" >Name</label>
+              <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter your FullName" >
+            </div>
+            <div class="mb-3 one">
+              <label for="clientEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="clientEmail" aria-describedby="emailHelp" placeholder="Enter your email" >
+              <div id="emailHelp" class="form-text">I'll never share your email & phone with anyone else.</div>
+            </div>
+            <div class="mb-3 one" id="tel">
+              <label for="clientPhone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="clientPhone" placeholder="Enter your phone number">
+            </div>
+            <div class="mb-3 one">
+              <label class="form-check-label" for="query">Query?</label>
+             <textarea name="query" id="query" cols="30" rows="10" placeholder="Enter your query" ></textarea>
+            </div>
+            <div class="mb-3" id="form-check">
+              <input type="checkbox" class="form-check-input" id="isClient">
+              <label class="form-check-label" for="isClient">I want you to work on project with me</label>
+            </div>
+            <button type="submit" class="btn btn-primary" id="cSubmit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <a href="/index.html"><button id="back"><i class="fa-solid fa-chevron-left"></i> Back Home</button></a>
+    <script src="script.js"></script>
+  </body>
+</html>

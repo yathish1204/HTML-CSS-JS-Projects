@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Index HTML */
+
+.sideBar {
+    background-color: rgb(28, 28, 28);
+    transition: transform 0.3s ease-in;
+    position: absolute;
+}
+
+.main {
+    width: 88vw;
+    left: 20vw;
+
+}
+
+.container {
+    display: flex;
+
+}
+
+nav {
+    padding: 40px 16px;
+    height: 100vh;
+    margin-top:40px;
+    /* padding-left: 10px; */
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 20px;
+    padding: 32px 0;
+    padding-right: 16px;
+    font-weight: 300;
+    /* cursor: pointer; */
+}
+
+/* For hover box effect */
+/* nav ul li:hover{
+    background-color: rgb(38, 38, 38) ;
+} */
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: letter-spacing 0.2s ease-in;
+}
+
+nav ul li a:hover {
+    color: dodgerblue;
+    /* letter-spacing: 0.2px; */
+}
+
+.infoContainer {
+    /* background-color: rgb(230, 230, 230); */
+    height: 58vh;
+    width: 80vw;
+    margin: 6vw 10vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.devPic img {
+    height: 58vh;
+    border-radius: 24px;
+    position: relative;
+}
+
+
+
+.devInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello {
+    font-size: 3.2rem;
+    font-family: "Source Code Pro", monospace;
+}
+
+.name {
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family: "Source Code Pro", monospace;
+
+}
+
+.about {
+    font-size: 1.4rem;
+    font-family: "Source Code Pro", monospace;
+
+}
+
+.moreAbout {
+    font-size: 1rem;
+    font-weight: 100;
+    color: grey;
+}
+
+.btn button {
+    margin-top: 10px;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: white;
+    background-color: dodgerblue;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    color: dodgerblue;
+    background-color: white;
+
+}
+
+button:nth-child(1) {
+    margin-right: 12px;
+}
+
+.pro {
+    display: flex;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    flex-direction: row;
+}
+
+#typingText {
+    font-size:1.4rem;
+    border-right: 3px solid #1e1e1e;
+    white-space: nowrap;
+    overflow: hidden;
+    width: auto;
+    color: dodgerblue;
+    padding: 0 0px;
+    animation: typing 3s steps(28, end),
+        blink-caret 0.5s step-end infinite alternate;
+    margin-top: -2px;
+    /* margin-right: 16px; */
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #484848;
+    }
+}
+
+.overlay {
+    position: absolute;
+    /* inset: 0; */
+    top: 65vh;
+    left: 62vw;
+    /* z-index: 2; */
+    opacity: 0;
+    transition: 0.2s ease-in;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 8px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.devPic:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 1rem;
+}
+
+
+/* Contact HTML */
+
+.contactForm {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0 32px;
+}
+
+.contactForm form div {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* text-align: center; */
+    margin-top: 4vh;
+}
+
+#emailHelp {
+    font-size: 12px;
+    color: midnightblue;
+    margin: -2px 5px;
+}
+
+.contactForm input[type="text"] {
+    width: 20vw;
+    border-radius: 4px;
+    padding: 10px 24px 10px 16px;
+    border: 1px solid dodgerblue;
+    margin-top: 4px;
+}
+
+.contactForm input[type="email"] {
+    width: 20vw;
+    border-radius: 4px;
+    padding: 10px 24px 10px 16px;
+    border: 1px solid dodgerblue;
+    margin-top: 4px;
+}
+
+.contactForm input[type="tel"] {
+    width: 20vw;
+    border-radius: 4px;
+    padding: 10px 24px 10px 16px;
+    border: 1px solid dodgerblue;
+    margin-top: 4px;
+}
+
+textarea {
+    width: 20vw;
+    border-radius: 4px;
+    padding: 10px 24px 10px 16px;
+    border: 1px solid dodgerblue;
+    margin-top: 4px;
+    resize: none;
+}
+
+input:active {
+    border: 2px solid grey;
+}
+
+#tel {
+    margin-top: -8px;
+}
+
+input::placeholder {
+    color: rgb(177, 177, 177);
+    font-size: 0.8rem;
+}
+
+/* .one input:valid{
+    border: 1px solid green;
+}
+
+.one input:invalid{
+    border: 1px solid red;
+} */
+
+.contactForm .mb-3 label {
+    font-size: 1rem;
+    /* margin-bottom: 8px; */
+}
+
+/* form:nth-child(3){
+    margin-top: -24px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+} */
+
+
+
+/* input[type = "checkbox"]{
+    margin-left: -24px;
+} */
+
+#form-check {
+    display: flex;
+    flex-direction: row;
+    margin-top: -4px;
+}
+
+#form-check input {
+    /* -webkit-appearance: none; */
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 6px;
+    background-color: rgb(241, 241, 255);
+    border: 1px solid grey;
+}
+
+/* input[type="checkbox"].checked + #form-check {
+    background-color: dodgerblue;
+    border: 1px solid black;
+} */
+
+#cSubmit {
+    width: 10vw;
+    padding: 10px 24px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 2px;
+    border: 1px solid rgb(40, 40, 40);
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#cSubmit:hover {
+    background-color: white;
+    border: 1px solid rgb(23, 23, 23);
+    color: dodgerblue;
+}
+
+
+#back {
+    margin-top: 32px;
+    padding: 8px 24px;
+    border-radius: 6px;
+    color: white;
+    background-color: dodgerblue;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+}
+
+/* Blog html */
+
+.blogItem{
+    /* margin: 20px; */
+    margin: 32px 32px;
+    font-family: "Source Code Pro", monospace;
+}
+
+h1{
+    font-family: "Source Code Pro", monospace;
+    margin: 24px;
+}
+ p{
+    font-family: "Source Code Pro", monospace;
+}
+
+.btn-sm{
+    margin-top:16px;
+    padding: 6px 18px;
+    border-radius: 4px;
+    color: white;
+    background-color: dodgerblue;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.intro h2{
+    font-family: "Roboto", sans-serif;
+    margin: 16px;
+    
+}
+
+.intro p{
+    font-family: "Source Code Pro", monospace;
+    margin: 16px;
+}
+
+.skillContainer{
+    padding: 12px;;
+}
+
+.skillItem{
+    display: flex;
+    align-items: center;
+}
+.skill{
+    width:240px;
+    height: 8px;
+    background-color: dodgerblue;
+    border: 1px solid grey;
+}
+
+.t100{
+    width: 256px;
+}
+.t50{
+    width:125px;
+}
+.t25{
+    width:75px;
+}
+.t75{
+    width:200px;
+}
+
+.skillItemOnceAgain{
+    width:240px;
+    height: 8px;
+    background-color: dodgerblue;
+    border: 1px solid grey;
+    margin: 10px;
+}
+
+
+@media  (max-width:1245px) {
+    
+    .sideBar{
+        position: absolute;
+        transform: translate(-443px);
+    }
+    .devPic{
+        display: none;
+    }
+
+}
+
+
+.hamBurger{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    
+}
+
+.ham{
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 5px;
+    border-radius: 4px;
+    margin-left: 6px;
+}
+
+.ham:hover{
+    fill: #484848;
+}
+
+.cross{
+    margin-left: 120px;
+    /* color: white !important; */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.sideBarGo{
+    transform: translate(-443px , 0px);
+    position: absolute;
+}
